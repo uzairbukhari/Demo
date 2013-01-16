@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../JavaScripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <link href="../Styles/ValidationCss.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/myPageStyle.css" rel="stylesheet" type="text/css" />
+    <title>...:: Form Validation Using JavaScript ::...</title>
+    <script src="../JavaScripts/MyValidator.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="stylized" class="myform">
+        <form id="form" name="form">
+        <img alt="" src="../Images/folio3-logo.png" />
+        <hr />
+        <p>
+            Form Validation using JavaScript.</p>
+        <label>
+            Name <span class="small">Enter name here</span>
+        </label>
+        <input id="Text1" type="text" validationtype="required" />
+        <label>
+            Email <span class="small">Enter Email here</span>
+        </label>
+        <input id="Text2" type="text" validationtype="email" /><br />
+        <label>
+            Education <span class="small">Enter education here</span>
+        </label>
+        <input id="Text6" type="text" validationtype="required" /><br />
+        <label>
+            CGPA <span class="small">Enter CGPA here</span>
+        </label>
+        <input id="Text5" type="text" validationtype="gpa" /><br />
+        <label>
+            Phone# <span class="small">Enter phone number here</span>
+        </label>
+        <input id="Text3" type="text" validationtype="numeric" /><br />
+        <button type="button">
+            Submit</button>
+        </form>
+        <div class="spacer">
+        </div>
+    </div>
+</body>
+</html>

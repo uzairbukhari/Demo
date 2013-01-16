@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        getClosure = function (Val1) {
+            var val3 = 100;
+            function abc() {
+                alert("uzair");
+            }
+            return function (Val2) {
+                abc();
+                return Val1 + Val2 + val3;
+            };
+        }
+        var adder = getClosure(10);
+        //adder.abc();
+        //alert(adder(20));
+
+        var PS = {};
+        PS.Util = {};
+        PS.Util.Browser = {
+            getHeight : function(){
+                alert("GetHeight");
+            },
+
+            getWidth : function(Height){
+                alert("GetWidth" + Height);
+            }
+        };
+
+        //PS.Util.Browser.getHeight();
+        //PS.Util.Browser.getWidth(10);
+
+        function myClass(Name) {
+            this.name = Name;
+            this.type = "MyClass";
+            this.abc = "abc";
+        }
+
+        myClass.prototype.introduce = function () {
+            //alert("My name is " + this.name + "and this is " + this.type);
+        }
+
+        function myChildClass(Name) {
+            this.name = Name;
+            this.type = "Em a child";
+        }
+
+        myChildClass.prototype = myClass.prototype;
+
+        var n = new myClass("Uzair");
+
+        var c = new myChildClass("Ali");
+        c.abc = "as";
+        alert(c.abc);
+        
+
+
+
+        //c.name = "ali";
+        c.introduce();
+        //n.name = "ali";
+        //alert(n.name);
+        //n.introduce();
+
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="Add Two" onclick=" var adder = getClosure(2) ; alert(adder(5)); "/>
+    <input id="Button2" type="button" value="Add Four" onclick="var adder = getClosure(4); alert(adder(5));" />
+
+    <br />
+    <input id="Text1" type="text" />
+    <input id="Text2" type="text" />
+</body>
+</html>
